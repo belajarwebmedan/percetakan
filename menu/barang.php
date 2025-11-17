@@ -1,0 +1,79 @@
+<?php
+/*
+$a=10;
+$b=35;
+echo "Hasil $a + $b adalah ".$a+$b;
+
+if ($a % 2 == 0) {
+    echo "<br> $a adalah Bilangan Bulat ";
+}else {
+    echo "<br> $a adalah Bilangan Ganjil ";
+}
+
+if ($b % 2 == 0) {
+    echo "<br> $b adalah Bilangan Bulat ";
+}else {
+    echo "<br> $b adalah Bilangan Ganjil ";
+}
+
+for ($i=0; $i < 10 ; $i++) { 
+    echo "<br>Ini adalah perulanga ke $i";
+}
+tambah(67,90);
+function tambah($a, $b){
+    echo "<br>$a + $b = ". $a+$b;
+} 
+
+$nilai[1]=60;
+$nilai[2]=80;
+$nilai[3]=82;
+$nilai[4]=84;
+$nilai[5]=86;
+$nilai= array('andi','budi','ayu','anggi','calvin');
+for ($i=0; $i < 5; $i++) { 
+    echo "<br>". $nilai[$i];
+    # code...
+}
+    */
+
+error_reporting(0);
+?>
+<link rel="stylesheet" href="../style.css">
+<div class="formulir">
+<form action="http://localhost/percetakan/index.php?halaman=barang" method="POST">
+    <table>
+        <tr>
+            <td>Nama Barang</td>
+            <td><input type="text" name='namaBrg'></td>
+        </tr>
+        <tr>
+            <td>Satuan</td>
+            <td><input type="text" name='satuan'></td>
+        </tr>
+        <tr>
+            <td>Harga</td>
+            <td><input type="text" name='harga'></td>
+        </tr>
+        <tr>
+            <td colspan=2><button>Simpan</button></td>
+        </tr>
+         <input type="hidden" name="halaman" value="barang">
+    </table>
+
+    <?php
+    // echo     $_GET['namaBrg'].$_GET['satuan'].$_GET['harga'];
+    // echo     $_POST['namaBrg'].$_POST['satuan'].$_POST['harga'];
+
+    $koneksi = mysqli_connect('localhost', 'root', '', 'db_percetakan');
+    // Ambil variabel POST
+    $namaBrg = $_POST['namaBrg'];
+    $satuan  = $_POST['satuan'];
+    $harga   = $_POST['harga'];
+
+    // Query aman
+    $sql = "INSERT INTO tblBarang (namaBrg, satuan, harga) 
+            VALUES ('$namaBrg', '$satuan', '$harga')";
+    mysqli_query($koneksi,$sql);
+    ?>
+</form>
+</div>

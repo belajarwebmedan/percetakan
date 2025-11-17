@@ -22,15 +22,34 @@
         </div>
             <div class="leftSide">
                 <ul class="menu">
+                    <a href="http://localhost/percetakan/index.php?halaman=home">
                     <li class="menu-item"> <i class="fa fa-home"></i> Home</li>
+                    
+                    <a href="http://localhost/percetakan/index.php?halaman=barang">
                     <li class="menu-item"><i class="fa fa-list-alt"></i> Barang</li>
+                    </a>
+
+                    <a href="http://localhost/percetakan/index.php?halaman=transaksi">
                     <li class="menu-item"> <i class="fa fa-credit-card"></i> Transaksi</li>
+                    </a>
                 </ul>
             </div>
             <div class="konten">
                 <div class="isi-konten">
-                    Selamat Datang di Sistem Informasi Percetakan Berjaya Selamanya. Mohon kelola semua transaksi menggunakan sistem ini.
-                    <h5>Grafik Transaksi</h5>
+                    <?php
+                    if (!isset($_GET['halaman'])) {
+                       include("menu/home.php");
+                    }else {
+                        if ($_GET['halaman']=='home') {
+                            include("menu/home.php");
+                        }elseif ($_GET['halaman']=='barang') {
+                            include("menu/barang.php");
+                        }elseif ($_GET['halaman']=='transaksi') {
+                            include("menu/transaksi.php");
+                        }
+                    }
+                        
+                    ?>
                 </div>
             </div>
             <div class="rightSide">
