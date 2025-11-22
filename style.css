@@ -12,6 +12,7 @@
     --bg2:#07889B;
     --bg3:#66B9BF;
     --bg4:#EEAA7B;
+    --bg4-rgb: 238, 170, 123;
   /* Texts */
   --text-light:#FFF;
   --text-primary: #1E293B;
@@ -41,7 +42,7 @@ body{
 .container{
     display: grid;
     grid-template-columns: 200px 1fr 200px;
-    grid-template-rows: 200px 1fr 50px;
+    grid-template-rows: 150px 1fr 50px;
     min-height: 100vh;
     gap:5px
 }
@@ -70,7 +71,7 @@ body{
 }
 .footer{
     grid-column: 1/4;
-    background-color: black;  
+    background-color: var(--bg2);  
     color: var(--text-light);
     text-align: center;
     padding-top: 10px;
@@ -117,9 +118,10 @@ body{
     text-align: justify;
     border-left: solid;
     border-left-style:groove;
-    border-left-color: var(--bg3);
+    border-left-color: var(--bg4);
     border-left-width: 5px;
     padding: 5px;
+    background-color: rgba(var(--bg4-rgb), 0.2);
 }
 .slogan{
     padding: 5px;
@@ -137,6 +139,9 @@ a{
 .formulir{
     border-style:groove;
     padding: 5px;
+}
+.judul-form{
+    text-align: center;
 }
 /* =============================================================================== */
 /* =============================================================================== */

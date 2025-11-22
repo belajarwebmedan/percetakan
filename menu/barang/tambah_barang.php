@@ -38,9 +38,10 @@ for ($i=0; $i < 5; $i++) {
 
 error_reporting(0);
 ?>
-<link rel="stylesheet" href="../style.css">
+<!-- <link rel="stylesheet" href="../style.css"> -->
 <div class="formulir">
-<form action="http://localhost/percetakan/index.php?halaman=barang" method="POST">
+<form action="menu/barang/aksi_tambah_barang.php" method="POST">
+    <h5 class="judul-form"> Form Tambah Barang</h5>
     <table>
         <tr>
             <td>Nama Barang</td>
@@ -58,22 +59,6 @@ error_reporting(0);
             <td colspan=2><button>Simpan</button></td>
         </tr>
          <input type="hidden" name="halaman" value="barang">
-    </table>
-
-    <?php
-    // echo     $_GET['namaBrg'].$_GET['satuan'].$_GET['harga'];
-    // echo     $_POST['namaBrg'].$_POST['satuan'].$_POST['harga'];
-
-    $koneksi = mysqli_connect('localhost', 'root', '', 'db_percetakan');
-    // Ambil variabel POST
-    $namaBrg = $_POST['namaBrg'];
-    $satuan  = $_POST['satuan'];
-    $harga   = $_POST['harga'];
-
-    // Query aman
-    $sql = "INSERT INTO tblBarang (namaBrg, satuan, harga) 
-            VALUES ('$namaBrg', '$satuan', '$harga')";
-    mysqli_query($koneksi,$sql);
-    ?>
+    </table>   
 </form>
 </div>

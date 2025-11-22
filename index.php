@@ -43,7 +43,7 @@
                         if ($_GET['halaman']=='home') {
                             include("menu/home.php");
                         }elseif ($_GET['halaman']=='barang') {
-                            include("menu/barang.php");
+                            include("menu/barang/tambah_barang.php");
                         }elseif ($_GET['halaman']=='transaksi') {
                             include("menu/transaksi.php");
                         }
