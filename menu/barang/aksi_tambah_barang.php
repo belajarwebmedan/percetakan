@@ -22,7 +22,7 @@
     $harga   = sanitize($koneksi,$_POST['harga']);
 
     // Query aman
-    $sql = "INSERT INTO tblBarang (namaBrg, satuan, harga) 
+    $sql = "INSERT INTO barang (nama_barang, satuan, harga) 
             VALUES ('$namaBrg', '$satuan', '$harga')";
     mysqli_query($koneksi,$sql);    
     ?>

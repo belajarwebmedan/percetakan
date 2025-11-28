@@ -35,9 +35,9 @@ transform: rotate(360deg);
 }
 
 body{
-    margin: 10px 200px;
-    background-color: var(--bg-secondary);
-    font-family: 'Inter', sans-serif;
+    margin: 10px 200px!important;
+    background-color: var(--bg-secondary) !important;
+    font-family: 'Inter', sans-serif!important;
 }
 .container{
     display: grid;
@@ -141,7 +141,12 @@ a{
     padding: 5px;
 }
 .judul-form{
-    text-align: center;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: solid;
+    border-bottom-color: #909090;
+    padding: 5px;
+    font-size: 14pt;
 }
 /* =============================================================================== */
 /* =============================================================================== */

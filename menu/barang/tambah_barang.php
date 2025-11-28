@@ -42,23 +42,23 @@ error_reporting(0);
 <div class="formulir">
 <form action="menu/barang/aksi_tambah_barang.php" method="POST">
     <h5 class="judul-form"> Form Tambah Barang</h5>
-    <table>
+    <table widht="100%">
         <tr>
             <td>Nama Barang</td>
-            <td><input type="text" name='namaBrg'></td>
+            <td><input type="text" name='namaBrg' class="form-control col-12" ></td>
         </tr>
         <tr>
             <td>Satuan</td>
-            <td><input type="text" name='satuan'></td>
+            <td><input type="text" name='satuan' class="form-control" ></td>
         </tr>
         <tr>
             <td>Harga</td>
-            <td><input type="text" name='harga'></td>
+            <td><input type="text" name='harga' class="form-control" ></td>
         </tr>
         <tr>
-            <td colspan=2><button>Simpan</button></td>
+            <td colspan=2><button class="btn btn-primary">Simpan</button></td>
         </tr>
-         <input type="hidden" name="halaman" value="barang">
+         <input type="hidden" name="halaman" value="barang" >
     </table>   
 </form>
 </div>
