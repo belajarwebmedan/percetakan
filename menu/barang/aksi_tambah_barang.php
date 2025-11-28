@@ -1,7 +1,4 @@
 <?php
-    // echo     $_GET['namaBrg'].$_GET['satuan'].$_GET['harga'];
-    // echo     $_POST['namaBrg'].$_POST['satuan'].$_POST['harga'];
-
     function sanitize($koneksi, $data) {
     $data = trim($data);                               // hapus spasi
     $data = strip_tags($data);                         // hilangkan tag HTML
@@ -12,18 +9,14 @@
 
 
     $koneksi = mysqli_connect('localhost', 'root', '', 'db_percetakan');
-    // Ambil variabel POST
-    // $namaBrg = ($_POST['namaBrg']);
-    // $satuan  = ($_POST['satuan']);
-    // $harga   = ($_POST['harga']);
-
     $namaBrg = sanitize($koneksi,$_POST['namaBrg']);
     $satuan  = sanitize($koneksi,$_POST['satuan']);
+    $stok   = sanitize($koneksi,$_POST['stok']);
     $harga   = sanitize($koneksi,$_POST['harga']);
 
     // Query aman
-    $sql = "INSERT INTO barang (nama_barang, satuan, harga) 
-            VALUES ('$namaBrg', '$satuan', '$harga')";
+    $sql = "INSERT INTO barang (nama_barang, satuan,stok, harga) 
+            VALUES ('$namaBrg', '$satuan', '$stok', '$harga')";
     mysqli_query($koneksi,$sql);    
     ?>
     <script>

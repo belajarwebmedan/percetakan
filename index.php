@@ -23,14 +23,17 @@
         </div>
             <div class="leftSide">
                 <ul class="menu">
-                    <a href="http://localhost/percetakan/index.php?halaman=home">
+                    <a href="http://localhost/percetakan/index.php?halaman=home" style="color: inherit;        /* ikut warna teks di sekitarnya */
+    text-decoration: none;">
                     <li class="menu-item"> <i class="fa fa-home"></i> Home</li>
                     
-                    <a href="http://localhost/percetakan/index.php?halaman=barang">
+                    <a href="http://localhost/percetakan/index.php?halaman=barang" style="color: inherit;        /* ikut warna teks di sekitarnya */
+    text-decoration: none;">
                     <li class="menu-item"><i class="fa fa-list-alt"></i> Barang</li>
                     </a>
 
-                    <a href="http://localhost/percetakan/index.php?halaman=transaksi">
+                    <a href="http://localhost/percetakan/index.php?halaman=transaksi" style="color: inherit;        /* ikut warna teks di sekitarnya */
+    text-decoration: none;">
                     <li class="menu-item"> <i class="fa fa-credit-card"></i> Transaksi</li>
                     </a>
                 </ul>
@@ -44,7 +47,7 @@
                         if ($_GET['halaman']=='home') {
                             include("menu/home.php");
                         }elseif ($_GET['halaman']=='barang') {
-                            include("menu/barang/tambah_barang.php");
+                            include("menu/barang/barang.php");
                         }elseif ($_GET['halaman']=='transaksi') {
                             include("menu/transaksi.php");
                         }
