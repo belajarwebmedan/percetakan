@@ -48,6 +48,10 @@
                             include("menu/home.php");
                         }elseif ($_GET['halaman']=='barang') {
                             include("menu/barang/barang.php");
+                        }elseif ($_GET['halaman']=='tambah_barang') {
+                            include("menu/barang/tambah_barang.php");
+                        }elseif ($_GET['halaman']=='edit_barang') {
+                            include("menu/barang/edit_barang.php");
                         }elseif ($_GET['halaman']=='transaksi') {
                             include("menu/transaksi.php");
                         }

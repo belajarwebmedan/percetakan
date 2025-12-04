@@ -1,8 +1,8 @@
 
 <!-- <link rel="stylesheet" href="../style.css"> -->
 <div class="formulir">
-<form action="menu/barang/aksi_tambah_barang.php" method="POST">
-    <h5 class="judul-form"> Form Tambah Barang</h5>
+<form action="menu/barang/aksi_edit_barang.php" method="POST">
+    <h5 class="judul-form"> Form Edit Barang</h5>
     <style>
         .label-col {
             width: 120px;        /* atur lebarnya agar pas */
