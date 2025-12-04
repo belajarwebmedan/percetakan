@@ -12,6 +12,7 @@ $hasil= mysqli_query($koneksi,"select * from barang;");
     <th>Satuan Barang</th>
     <th>Stok</th>
     <th>Harga</th>
+    <th>Aksi</th>
   </thead>
   <tbody>
     <?php
@@ -26,6 +27,7 @@ $hasil= mysqli_query($koneksi,"select * from barang;");
     <td><?=$row['satuan']?></td>
     <td><?=$row['stok']?></td>
     <td><?=$row['harga']?></td>
+    <td><button class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></button>  <button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></button></td>
     </tr>
 
     <?php
