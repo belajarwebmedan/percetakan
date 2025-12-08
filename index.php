@@ -31,6 +31,11 @@
     text-decoration: none;">
                     <li class="menu-item"><i class="fa fa-list-alt"></i> Barang</li>
                     </a>
+                    
+                    <a href="http://localhost/percetakan/index.php?halaman=users" style="color: inherit;        /* ikut warna teks di sekitarnya */
+    text-decoration: none;">
+                    <li class="menu-item"><i class="fa fa-users"></i> Users</li>
+                    </a>
 
                     <a href="http://localhost/percetakan/index.php?halaman=transaksi" style="color: inherit;        /* ikut warna teks di sekitarnya */
     text-decoration: none;">
@@ -52,7 +57,25 @@
                             include("menu/barang/tambah_barang.php");
                         }elseif ($_GET['halaman']=='edit_barang') {
                             include("menu/barang/edit_barang.php");
-                        }elseif ($_GET['halaman']=='transaksi') {
+                        }elseif ($_GET['halaman']=='users') {
+                            include("menu/users/users.php");
+                        }
+                        
+
+                        elseif ($_GET['halaman']=='users') {
+                            include("menu/users/users.php");
+                        }elseif ($_GET['halaman']=='tambah_users') {
+                            include("menu/users/tambah_users.php");
+                        }elseif ($_GET['halaman']=='edit_users') {
+                            include("menu/users/edit_users.php");
+                        }elseif ($_GET['halaman']=='users') {
+                            include("menu/users/users.php");
+                        }
+                        
+                        
+                        
+                        
+                        elseif ($_GET['halaman']=='transaksi') {
                             include("menu/transaksi.php");
                         }
                     }

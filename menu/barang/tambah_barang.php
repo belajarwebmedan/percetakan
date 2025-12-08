@@ -13,19 +13,19 @@
     <table width="100%">
         <tr>
             <td class="label-col">Nama Barang</td>
-            <td><input type="text" name='namaBrg' class="form-control col-12" ></td>
+            <td><input required type="text" name='namaBrg' class="form-control col-12" ></td>
         </tr>
         <tr>
             <td>Satuan</td>
-            <td><input type="text" name='satuan' class="form-control" ></td>
+            <td><input required type="text" name='satuan' class="form-control" ></td>
         </tr>
         <tr>
             <td>Stok</td>
-            <td><input type="text" name='stok' class="form-control" ></td>
+            <td><input required type="text" name='stok' class="form-control" ></td>
         </tr>
         <tr>
             <td>Harga</td>
-            <td><input type="text" name='harga' class="form-control" ></td>
+            <td><input required type="text" name='harga' class="form-control" ></td>
         </tr>
         <tr>
             <td colspan=2>
