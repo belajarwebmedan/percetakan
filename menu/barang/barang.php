@@ -5,8 +5,8 @@ $hasil= mysqli_query($koneksi,"select * from barang;");
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <h5 class="judul-form">Data Barang</h5>
 <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-  <a href="http://localhost/percetakan/index.php?halaman=tambah_barang"><button class="btn btn-primary btn-sm"><i class="fa fa-plus-circle"></i> Tambah</button></a>
-  <table class="table table-hover">
+  <a href="http://localhost/percetakan/index.php?halaman=tambah_barang"><button class="btn btn-primary btn-sm mb-4"><i class="fa fa-plus-circle"></i> Tambah</button></a>
+  <table id="tabelUsers" class="table table-hover">
     <thead>
       <th>No.</th>
       <!-- <th>ID Barang</th> -->

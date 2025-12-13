@@ -11,7 +11,7 @@
  Target Server Version : 100432 (10.4.32-MariaDB)
  File Encoding         : 65001
 
- Date: 08/12/2025 17:16:27
+ Date: 13/12/2025 11:59:13
 */
 
 SET NAMES utf8mb4;
@@ -44,7 +44,7 @@ CREATE TABLE `kategori_layanan`  (
   `nama_kategori` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `deskripsi` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL,
   PRIMARY KEY (`id_kategori`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of kategori_layanan
@@ -217,13 +217,13 @@ CREATE TABLE `users`  (
   `role` enum('admin','kasir','operator') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   `status_hapus` enum('Y','T') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL,
   PRIMARY KEY (`id_user`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 9 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES (5, 'Muhammad Zen', 'zen@zen.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'admin', NULL);
 INSERT INTO `users` VALUES (6, 'Indah', 'indah@indah.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'kasir', NULL);
 INSERT INTO `users` VALUES (7, 'Frans', 'frans@frans.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'operator', NULL);
+INSERT INTO `users` VALUES (8, 'Muhammad Zen', 'zen@zen.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', 'admin', NULL);
 
 SET FOREIGN_KEY_CHECKS = 1;
